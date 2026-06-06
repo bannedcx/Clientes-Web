@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cipher of Shambhala | Memory Match Adventure</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body class="uncharted-theme">
+
+    <main id="app-container">
+
+        <section id="setup-screen" class="active-view journal-page">
+            <header class="game-header">
+                <h1 class="game-title">The Cipher <span class="subtitle">of Shambhala</span></h1>
+                <p class="tagline">Memory Match Adventure</p>
+            </header>
+
+            <form id="setup-form" class="artifact-form">
+                
+                <fieldset class="form-group">
+                    <legend class="form-label">Elige tu Expedición</legend>
+                    <select id="game-mode" name="gameMode" required>
+                        <option value="solo">Solitario Cronometrado</option>
+                        <option value="pvp">PvP Local (2 Jugadores)</option>
+                        <option value="practice">Práctica Libre</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="form-group players-input-container">
+                    <legend class="form-label">Identificación de Exploradores</legend>
+                    <div class="input-wrapper">
+                        <label for="player1-name">Explorador 1:</label>
+                        <input type="text" id="player1-name" name="player1Name" placeholder="Nate Drake" required maxlength="12">
+                    </div>
+                    <div id="player2-input-wrapper" class="input-wrapper hidden">
+                        <label for="player2-name">Explorador 2:</label>
+                        <input type="text" id="player2-name" name="player2Name" placeholder="Chloe Frazer" maxlength="12">
+                    </div>
+                </fieldset>
