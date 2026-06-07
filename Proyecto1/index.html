@@ -43,3 +43,55 @@
                         <input type="text" id="player2-name" name="player2Name" placeholder="Chloe Frazer" maxlength="12">
                     </div>
                 </fieldset>
+
+                <fieldset class="form-group">
+                    <legend class="form-label">Complejidad de las Ruinas</legend>
+                    <div class="radio-options">
+                        <label><input type="radio" name="difficulty" value="4x4" checked> 4x4 (Fácil)</label>
+                        <label><input type="radio" name="difficulty" value="6x6"> 6x6 (Medio)</label>
+                        <label><input type="radio" name="difficulty" value="8x8"> 8x8 (Difícil)</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend class="form-label">Selección de Artefactos</legend>
+                    <select id="theme-select" name="themeSelect" required>
+                        <option value="artifacts">Artefactos Antiguos</option>
+                        <option value="desert">Símbolos del Desierto</option>
+                        <option value="maps">Cartografía Perdida</option>
+                    </select>
+                </fieldset>
+
+                <button type="submit" class="start-btn artifact-btn">Iniciar Expedición</button>
+            </form>
+        </section>
+
+        <section id="game-screen" class="hidden-view">
+            <aside id="game-hud" class="hud-panel parchment-texture">
+                <div class="hud-section players-stats">
+                    </div>
+                
+                <div class="hud-section game-info">
+                    <p id="move-counter">Movimientos: <span class="stat-value">0</span></p>
+                    <p id="game-timer" class="hidden">Tiempo: <span class="stat-value">00:00</span></p>
+                </div>
+
+                <div class="hud-section achievements-hud">
+                    <h3>Logros de Sesión</h3>
+                    <ul id="achievements-list">
+                        </ul>
+                </div>
+
+                <button id="reset-btn" class="reset-btn artifact-btn-small">Reiniciar</button>
+            </aside>
+
+            <section id="board-container" class="board-grid">
+                </section>
+        </section>
+
+        <section id="end-screen" class="hidden-view modal-overlay">
+            <div class="end-card journal-page animated-entry">
+                <header class="end-header">
+                    <h2>Expedición Completada</h2>
+                    <p id="end-message" class="end-victory-msg"></p>
+                </header>
