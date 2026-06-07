@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Special+Elite&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #1a1a1d;
+    --parchment: #f4e8c1;
+    --parchment-dark: #e3d2a4;
+    --ink: #3b2f2f;
+    --leather: #5a3d2b;
+    --gold-aged: #b8860b;
+    --gold-hover: #d4af37;
+    
+    --font-title: 'Cinzel', serif;
+    --font-text: 'Special Elite', monospace;
+}
+
+body.uncharted-theme {
+    background-color: var(--bg-dark);
+    
+    background-image: 
+        linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.7)),
+        url('https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2000&auto=format&fit=crop');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    font-family: var(--font-text);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#app-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.hidden-view {
+    display: none !important;
+}
+
+.active-view {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.journal-page {
+    background-color: var(--parchment);
+    
+    background-image: 
+        linear-gradient(rgba(244, 232, 193, 0.6), rgba(244, 232, 193, 0.6)), 
+        url('../assets/drake.webp');
+    
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    
+    box-shadow: 
+        0 20px 50px rgba(0,0,0,0.8),
+        inset 0 0 60px rgba(139, 69, 19, 0.3);
+    border: 2px solid var(--leather);
+    border-radius: 4px;
+    padding: 40px;
+    position: relative;
+}
+
+.journal-page::before {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    border: 1px solid rgba(90, 61, 43, 0.3);
+    pointer-events: none;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed rgba(90, 61, 43, 0.4);
+    padding-bottom: 20px;
+}
+
+.game-title {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--leather);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.game-title .subtitle {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--gold-aged);
+    margin-top: 5px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.form-group {
+    border: 1px solid var(--leather);
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-label {
+    font-family: var(--font-title);
+    font-weight: bold;
+    color: var(--leather);
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dotted var(--leather);
+    font-family: var(--font-text);
+    font-size: 1rem;
+    color: var(--ink);
+    outline: none;
+}
