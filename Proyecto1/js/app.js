@@ -6,3 +6,7 @@ const gameState = {
     moves: 0,
     timer: 0,
     matches: 0,
+
+    isBoardLocked: false,
+    currentPlayerIndex: 0,
+    scores: [0, 0],
