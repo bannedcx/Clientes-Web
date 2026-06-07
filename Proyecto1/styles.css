@@ -61,8 +61,8 @@ body.uncharted-theme {
     background-color: var(--parchment);
     
     background-image: 
-        linear-gradient(rgba(244, 232, 193, 0.65), rgba(244, 232, 193, 0.65)), 
-        url('../assets/drake.jpg');
+        linear-gradient(rgba(244, 232, 193, 0.6), rgba(244, 232, 193, 0.6)), 
+        url('../assets/drake.webp');
     
     background-size: cover;
     background-position: top center;
@@ -83,4 +83,60 @@ body.uncharted-theme {
     top: 5px; left: 5px; right: 5px; bottom: 5px;
     border: 1px solid rgba(90, 61, 43, 0.3);
     pointer-events: none;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed rgba(90, 61, 43, 0.4);
+    padding-bottom: 20px;
+}
+
+.game-title {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--leather);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.game-title .subtitle {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--gold-aged);
+    margin-top: 5px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.form-group {
+    border: 1px solid var(--leather);
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-label {
+    font-family: var(--font-title);
+    font-weight: bold;
+    color: var(--leather);
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dotted var(--leather);
+    font-family: var(--font-text);
+    font-size: 1rem;
+    color: var(--ink);
+    outline: none;
 }
