@@ -27,3 +27,62 @@ function procesarJugada(cartaSeleccionada) {
     
     verificarCoincidencia();
 }
+
+function verificarCoincidencia() {
+    let esCoincidencia = primeraCarta.dataset.icon === segundaCarta.dataset.icon;
+
+    if (esCoincidencia) {
+        deshabilitarCartas();
+    } else {
+        desvoltearCartas();
+    }
+}
+
+function deshabilitarCartas() {
+    primeraCarta.classList.add('matched');
+    segundaCarta.classList.add('matched');
+    
+    gameState.matches++; 
+    sumarPunto(); 
+    
+    gameState.currentStreak++;
+    
+    desbloquearLogro('primerPaso');
+    
+    if (gameState.currentStreak === 3) {
+        desbloquearLogro('rachaCaliente');
+    }
+    
+    if (gameState.moves === 1 && gameState.matches === 1) {
+        desbloquearLogro('sinTitubeos');
+    }
+
+    verificarFinDePartida();
+    if (gameState.mode === 'solo' && gameState.timer < 45) {
+            desbloquearLogro('tanVelozComoUnaTortuga');
+        }
+    resetearTurno();
+}
+
+function desvoltearCartas() {
+
+    gameState.currentStreak = 0; 
+    gameState.isBoardLocked = true;
+    
+    primeraCarta.classList.add('error-shake');
+    segundaCarta.classList.add('error-shake');
+
+    setTimeout(() => {
+        primeraCarta.classList.remove('flipped', 'error-shake');
+        segundaCarta.classList.remove('flipped', 'error-shake');
+
+        cambiarTurno();
+        resetearTurno();
+    }, 1000);
+}
+
+function resetearTurno() {
+    primeraCarta = null;
+    segundaCarta = null;
+    gameState.isBoardLocked = false;
+}
