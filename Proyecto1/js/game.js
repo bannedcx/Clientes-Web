@@ -86,3 +86,30 @@ function resetearTurno() {
     segundaCarta = null;
     gameState.isBoardLocked = false;
 }
+
+function verificarFinDePartida() {
+    let paresNecesarios;
+    
+    switch (gameState.difficulty) {
+        case '4x4': paresNecesarios = 8; break;
+        case '6x6': paresNecesarios = 18; break;
+        case '8x8': paresNecesarios = 32; break;
+    }
+
+    if (gameState.matches === paresNecesarios) {
+        
+        if (gameState.mode === 'solo' && gameState.timer < 45) {
+            desbloquearLogro('tanVelozComoUnaTortuga');
+        }
+
+        gameState.isBoardLocked = true;
+        
+        if (gameState.mode === 'solo') {
+            detenerCronometro();
+        }
+
+        setTimeout(() => {
+            mostrarPantallaFinal();
+        }, 500); 
+    }
+}
