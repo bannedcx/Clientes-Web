@@ -234,3 +234,78 @@ select:focus, input[type="text"]:focus {
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     border: 2px solid var(--leather);
 }
+
+.card-front {
+    background-color: var(--gold-aged);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px);
+}
+
+.card-back {
+    background-color: var(--parchment);
+    transform: rotateY(180deg);
+}
+
+.error-shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+.card.matched .card-front {
+    background-color: var(--gold-hover);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+    opacity: 0.9;
+}
+
+#game-screen.active-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    #game-screen.active-view {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+#game-hud {
+    background-color: var(--parchment);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid var(--leather);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    min-width: 250px;
+}
+
+.hud-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed rgba(90, 61, 43, 0.3);
+}
+
+.hud-section h3 {
+    font-family: var(--font-title);
+    color: var(--leather);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.game-info p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    color: var(--gold-aged);
+    font-size: 1.4rem;
+}
