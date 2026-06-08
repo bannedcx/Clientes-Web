@@ -363,3 +363,29 @@ select:focus, input[type="text"]:focus {
     animation: slideInRight 0.5s forwards;
     border-left: 6px solid var(--leather);
 }
+
+.toast-icon {
+    font-size: 2rem;
+}
+
+.toast-text h4 {
+    font-family: var(--font-title);
+    color: var(--leather);
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.toast-text p {
+    font-weight: bold;
+    color: var(--ink);
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(120%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutRight {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(120%); opacity: 0; }
+}
