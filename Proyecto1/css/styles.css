@@ -389,3 +389,13 @@ select:focus, input[type="text"]:focus {
     from { transform: translateX(0); opacity: 1; }
     to { transform: translateX(120%); opacity: 0; }
 }
+
+#achievements-list {
+    list-style: none;
+    font-size: 0.9rem;
+}
+#achievements-list li {
+    margin-bottom: 5px;
+    border-bottom: 1px dotted var(--leather);
+    padding-bottom: 3px;
+}
