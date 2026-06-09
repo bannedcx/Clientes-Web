@@ -61,7 +61,7 @@ body.uncharted-theme {
     background-color: var(--parchment);
     
     background-image: 
-        linear-gradient(rgba(244, 232, 193, 0.6), rgba(244, 232, 193, 0.6)), 
+        linear-gradient(rgba(244, 232, 193, 0.68), rgba(244, 232, 193, 0.68)), 
         url('../assets/drake.webp');
     
     background-size: cover;
