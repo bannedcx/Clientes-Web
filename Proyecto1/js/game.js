@@ -58,9 +58,6 @@ function deshabilitarCartas() {
     }
 
     verificarFinDePartida();
-    if (gameState.mode === 'solo' && gameState.timer < 45) {
-            desbloquearLogro('tanVelozComoUnaTortuga');
-        }
     resetearTurno();
 }
 
@@ -98,7 +95,8 @@ function verificarFinDePartida() {
 
     if (gameState.matches === paresNecesarios) {
         
-        if (gameState.mode === 'solo' && gameState.timer < 45) {
+        // ¡Aquí es el ÚNICO lugar donde se evalúa el tiempo para el logro!
+        if (gameState.mode === 'solo' && gameState.timer <= 45) {
             desbloquearLogro('tanVelozComoUnaTortuga');
         }
 
