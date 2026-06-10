@@ -32,3 +32,21 @@ function desbloquearLogro(idLogro) {
 
 function mostrarNotificacionFlotante(logro) {
     const contenedor = document.getElementById('notifications-container');
+    
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification parchment-texture';
+    toast.innerHTML = `
+        <div class="toast-icon">${logro.icono}</div>
+        <div class="toast-text">
+            <h4>Logro Desbloqueado</h4>
+            <p>${logro.titulo}</p>
+        </div>
+    `;
+
+    contenedor.appendChild(toast);
+
+    setTimeout(() => {
+        toast.style.animation = 'slideOutRight 0.5s forwards';
+        setTimeout(() => toast.remove(), 500);
+    }, 4000);
+}
