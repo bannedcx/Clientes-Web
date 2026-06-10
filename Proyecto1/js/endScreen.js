@@ -32,3 +32,23 @@ function mostrarPantallaFinal() {
 
     document.getElementById('end-screen').classList.replace('hidden-view', 'active-view');
 }
+// Agregamos un listener para el botón de "Volver al Menú" y "Jugar de Nuevo"
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('back-to-menu-btn').addEventListener('click', () => {
+        location.reload();
+    });
+
+    document.getElementById('play-again-btn').addEventListener('click', () => {
+        document.getElementById('end-screen').classList.replace('active-view', 'hidden-view');
+        gameState.moves = 0;
+        gameState.matches = 0;
+        document.querySelector('#move-counter .stat-value').textContent = "0";
+        if (gameState.mode === 'solo') resetearCronometro();
+        
+        generarTablero();
+    });
+
+    document.getElementById('reset-btn').addEventListener('click', () => {
+        location.reload();
+    });
+});
