@@ -29,3 +29,6 @@ function desbloquearLogro(idLogro) {
         listaFinal.innerHTML += <li>${logro.icono} ${logro.titulo}: <small>${logro.desc}</small></li>;
     }
 }
+
+function mostrarNotificacionFlotante(logro) {
+    const contenedor = document.getElementById('notifications-container');
