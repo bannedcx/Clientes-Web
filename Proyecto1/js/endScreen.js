@@ -15,3 +15,20 @@ function mostrarPantallaFinal() {
     } else {
         mensajeFinal.textContent = ¡Impresionante exploración, ${gameState.players[0]}! Has descubierto todos los secretos.;
     }
+
+    const statsList = document.getElementById('final-stats-list');
+    statsList.innerHTML = ''; 
+
+    statsList.innerHTML += <li><strong>Movimientos totales:</strong> ${gameState.moves}</li>;
+    statsList.innerHTML += <li><strong>Pares encontrados:</strong> ${gameState.matches}</li>;
+    
+    let precision = gameState.moves > 0 ? Math.round((gameState.matches / gameState.moves) * 100) : 0;
+    statsList.innerHTML += <li><strong>Precisión:</strong> ${precision}%</li>;
+    
+    if (gameState.mode === 'solo') {
+        const tiempoFinal = document.querySelector('#game-timer .stat-value').textContent;
+        statsList.innerHTML += <li><strong>Tiempo total:</strong> ${tiempoFinal}</li>;
+    }
+
+    document.getElementById('end-screen').classList.replace('hidden-view', 'active-view');
+}
