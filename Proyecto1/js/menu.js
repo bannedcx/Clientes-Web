@@ -15,3 +15,35 @@ document.addEventListener('DOMContentLoaded', () => {
             player2Input.removeAttribute('required');
         }
     });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+
+        //guardamos config
+        gameState.mode = modeSelect.value;
+        gameState.difficulty = document.querySelector('input[name="difficulty"]:checked').value;
+        gameState.theme = document.getElementById('theme-select').value;
+        
+        gameState.players = [];
+        gameState.players.push(document.getElementById('player1-name').value);
+        
+        if (gameState.mode === 'pvp') {
+            gameState.players.push(player2Input.value);
+        }
+
+        document.getElementById('setup-screen').classList.replace('active-view', 'hidden-view');
+        document.getElementById('game-screen').classList.replace('hidden-view', 'active-view');
+
+        console.log("¡Expedición Iniciada! Configuración guardada:", gameState);
+        
+        const timerElement = document.getElementById('game-timer');
+        if (gameState.mode === 'solo') {
+            timerElement.classList.remove('hidden');
+        } else {
+            timerElement.classList.add('hidden');
+        }
+
+        generarTablero(); 
+        inicializarHUD();
+    });
+});
