@@ -30,3 +30,13 @@ function sumarPunto() {
     
     document.getElementById(`p${gameState.currentPlayerIndex + 1}-score`).textContent = gameState.scores[gameState.currentPlayerIndex];
 }
+
+function cambiarTurno() {
+    if (gameState.mode !== 'pvp') return;
+
+    document.getElementById(p${gameState.currentPlayerIndex + 1}-score-box).classList.remove('active-turn');
+
+    gameState.currentPlayerIndex = gameState.currentPlayerIndex === 0 ? 1 : 0;
+
+    document.getElementById(p${gameState.currentPlayerIndex + 1}-score-box).classList.add('active-turn');
+}
