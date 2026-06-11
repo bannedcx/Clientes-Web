@@ -22,3 +22,11 @@ function inicializarHUD() {
         `;
     }
 }
+
+function sumarPunto() {
+    if (gameState.mode !== 'pvp') return;
+
+    gameState.scores[gameState.currentPlayerIndex]++;
+    
+    document.getElementById(`p${gameState.currentPlayerIndex + 1}-score`).textContent = gameState.scores[gameState.currentPlayerIndex];
+}
