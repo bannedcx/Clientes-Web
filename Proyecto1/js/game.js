@@ -95,7 +95,7 @@ function verificarFinDePartida() {
 
     if (gameState.matches === paresNecesarios) {
         
-        if (gameState.mode === 'solo' && gameState.timer <= 45) {
+        if (gameState.mode === 'solo' && gameState.timer <= 30) {
             desbloquearLogro('tanVelozComoUnaTortuga');
         }
 
