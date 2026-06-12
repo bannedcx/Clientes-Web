@@ -32,6 +32,7 @@ function mostrarPantallaFinal() {
 
     document.getElementById('end-screen').classList.replace('hidden-view', 'active-view');
 }
+
 // Agregamos un listener para el botón de "Volver al Menú" y "Jugar de Nuevo"
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('back-to-menu-btn').addEventListener('click', () => {
