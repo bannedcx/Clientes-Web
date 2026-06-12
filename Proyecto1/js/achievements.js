@@ -9,7 +9,7 @@ function desbloquearLogro(idLogro) {
     const logro = catalogologros[idLogro];
 
     if (!logro) {
-        console.error(El logro '${idLogro}' no existe.);
+        console.error(`El logro '${idLogro}' no existe.`);
         return;
     }
 
@@ -21,12 +21,12 @@ function desbloquearLogro(idLogro) {
 
     const listaHUD = document.getElementById('achievements-list');
     if (listaHUD) {
-        listaHUD.innerHTML += <li>${logro.icono} <strong>${logro.titulo}</strong></li>;
+        listaHUD.innerHTML += `<li>${logro.icono} <strong>${logro.titulo}</strong></li>`;
     }
     
     const listaFinal = document.getElementById('end-achievements-list');
     if(listaFinal) {
-        listaFinal.innerHTML += <li>${logro.icono} ${logro.titulo}: <small>${logro.desc}</small></li>;
+        listaFinal.innerHTML += `<li>${logro.icono} ${logro.titulo}: <small>${logro.desc}</small></li>`;
     }
 }
 
