@@ -15,7 +15,7 @@ function iniciarCronometro() {
         let minStr = minutos < 10 ? '0' + minutos : minutos;
         let segStr = segundos < 10 ? '0' + segundos : segundos;
 
-        timerElement.textContent = ${minStr}:${segStr};
+        timerElement.textContent = `${minStr}:${segStr}`;
     }, 1000);
 }
 
