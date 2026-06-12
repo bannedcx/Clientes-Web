@@ -9,7 +9,7 @@ function desbloquearLogro(idLogro) {
     const logro = catalogologros[idLogro];
 
     if (!logro) {
-        console.error(el logro '${idLogro}' no existe.);
+        console.error(El logro '${idLogro}' no existe.);
         return;
     }
 
