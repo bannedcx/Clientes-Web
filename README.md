@@ -26,9 +26,9 @@ Lista de trofeos que se pueden desbloquear durante la sesión según el rendimie
 
  # Capturas de Pantalla de la Aplicacion #
 
-![Menu Principal](assets/menu.png)
-![Tablero de Juego](assets/tablero.png)
-![Pantalla de Victoria](assets/victoria.png)
+![Menu Principal](Proyecto1/assets/menu.png)
+![Tablero de Juego](Proyecto1/assets/tablero.png)
+![Pantalla de Victoria](Proyecto1/assets/victoria.png)
 
 # Division de Tareas #
 
