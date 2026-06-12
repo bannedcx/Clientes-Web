@@ -24,6 +24,12 @@ Lista de trofeos que se pueden desbloquear durante la sesión según el rendimie
 - 🎯 Preciso: Se otorga al acertar un par en el primerísimo intento del juego.
 - ⚡ Tan veloz como una tortuga: Se desbloquea exclusivamente si el jugador logra limpiar todo el tablero y el cronómetro se detiene en 30 segundos o menos.
 
+ # Capturas de Pantalla de la Aplicacion #
+
+![Menu Principal](assets/menu.png)
+![Tablero de Juego](assets/tablero.png)
+![Pantalla de Victoria](assets/victoria.png)
+
 # Division de Tareas #
 
 Este proyecto fue desarrollado de manera colaborativa, dividimos el trabajo de la siguiente manera (aclarando la participacion de los dos en el proyecto entero, pero dividiendonos las responsabilidades):
