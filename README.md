@@ -50,3 +50,5 @@ Abrir el terminal, powershell o command prompt y ejecutar el siguiente comando:
 
 ```bash
 git clone https://github.com/bannedcx/Clientes-Web.git
+y para usar el programa solo debemos acceder al directorio que seria:
+cd Clientes-Web
