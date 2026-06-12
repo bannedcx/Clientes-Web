@@ -399,3 +399,30 @@ select:focus, input[type="text"]:focus {
     border-bottom: 1px dotted var(--leather);
     padding-bottom: 3px;
 }
+
+#back-to-menu-btn {
+    background-color: #5c3e2b;
+    color: #f7f3e8;
+    border: 2px solid #362215;
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    display: block;
+    width: 50%;
+    margin: 15px auto 0 auto;
+}
+
+#back-to-menu-btn:hover {
+    background-color: var(--gold-aged);
+    color: #1a1a1a;
+    border-color: #f7f3e8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
